@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">YC001_calculator</string>
+    <string name="STRING"></string>
+    <string name="EQUAL">=</string>
+    <string name="INPUT_NUM"></string>
+    <string name="NINE">9</string>
+    <string name="EIGHT">8</string>
+    <string name="SEVEN">7</string>
+    <string name="SIX">6</string>
+    <string name="FIVE">5</string>
+    <string name="FOUR">4</string>
+    <string name="THREE">3</string>
+    <string name="TWO">2</string>
+    <string name="ONE">1</string>
+    <string name="ZERO">0</string>
+    <string name="ADD">+</string>
+    <string name="MINUS">-</string>
+    <string name="MUL">*</string>
+    <string name="MOD">/</string>
+    <string name="DELETE">delete</string>
+    <string name="DOT">．</string>
+</resources>

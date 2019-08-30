@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Str_answer"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="30dp"
+        android:gravity="end"
+        android:text="@string/STRING"
+        app:layout_constraintBottom_toTopOf="@+id/Num_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/Num_input"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:gravity="end"
+        android:hint="@string/INPUT_NUM"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Str_answer" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tableLayout4"
+        android:layout_width="411dp"
+        android:layout_height="523dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Num_input">
+
+
+        <Button
+
+            android:id="@+id/Btn_7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="186dp"
+            android:onClick="setInputNum"
+            android:tag="7"
+            android:text="@string/SEVEN"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_8"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Btn_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="186dp"
+            android:onClick="setInputNum"
+            android:tag="8"
+            android:text="@string/EIGHT"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_9"
+            app:layout_constraintStart_toEndOf="@+id/Btn_7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Btn_9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNum"
+            android:tag="9"
+            android:text="@string/NINE"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_add"
+            app:layout_constraintStart_toEndOf="@+id/Btn_8"
+            app:layout_constraintTop_toTopOf="@+id/Btn_8" />
+
+        <Button
+            android:id="@+id/Btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputOperator"
+            android:tag="+"
+            android:text="@string/ADD"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Btn_9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Btn_9" />
+
+
+        <Button
+            android:id="@+id/Btn_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNum"
+            android:tag="4"
+            android:text="@string/FOUR"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Btn_5"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/Btn_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNum"
+            android:tag="5"
+            android:text="@string/FIVE"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_6"
+            app:layout_constraintStart_toEndOf="@+id/Btn_4"
+            app:layout_constraintTop_toBottomOf="@+id/Btn_7" />
+
+        <Button
+            android:id="@+id/Btn_6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNum"
+            android:tag="6"
+            android:text="@string/SIX"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_minus"
+            app:layout_constraintStart_toEndOf="@+id/Btn_5"
+            app:layout_constraintTop_toBottomOf="@+id/Btn_add" />
+
+        <Button
+            android:id="@+id/Btn_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputOperator"
+            android:tag="-"
+            android:text="@string/MINUS"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Btn_6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Btn_6" />
+
+
+        <Button
+            android:id="@+id/Btn_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNum"
+            android:tag="1"
+            android:text="@string/ONE"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Btn_2"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/Btn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNum"
+            android:tag="2"
+            android:text="@string/TWO"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_3"
+            app:layout_constraintStart_toEndOf="@+id/Btn_1"
+            app:layout_constraintTop_toBottomOf="@+id/Btn_4" />
+
+        <Button
+            android:id="@+id/Btn_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNum"
+            android:tag="3"
+            android:text="@string/THREE"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_mul"
+            app:layout_constraintStart_toEndOf="@+id/Btn_2"
+            app:layout_constraintTop_toBottomOf="@+id/Btn_minus" />
+
+        <Button
+            android:id="@+id/Btn_mul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputOperator"
+            android:tag="*"
+            android:text="@string/MUL"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Btn_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Btn_3" />
+
+
+        <Button
+            android:id="@+id/Btn_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNum"
+            android:tag="0"
+            android:text="@string/ZERO"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_equal"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Btn_1" />
+
+        <Button
+            android:id="@+id/Btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputNULL"
+            android:text="@string/DELETE"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_mod"
+            app:layout_constraintStart_toEndOf="@+id/Btn_equal"
+            app:layout_constraintTop_toTopOf="@+id/Btn_equal" />
+
+        <Button
+            android:id="@+id/Btn_mod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setInputOperator"
+            android:tag="/"
+            android:text="@string/MOD"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Btn_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Btn_delete" />
+
+        <Button
+            android:id="@+id/Btn_equal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setCurrentAnswer"
+            android:tag="."
+            android:text="@string/EQUAL"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Btn_0"
+            app:layout_constraintEnd_toStartOf="@+id/Btn_delete"
+            app:layout_constraintStart_toEndOf="@+id/Btn_0" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
